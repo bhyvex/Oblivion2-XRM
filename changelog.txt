@@ -1,4 +1,23 @@
 
+Change Log Update (00.00.103)
+* 2018-02-05
++ Corrected issues with Linux (ARM) Builder and G++7 Compiler in Arch Linux.
++ Hooked in Jenkins build processing, on-demand builds are setup now, next will 
+  hooking up commits and pull-requests.
+
+Change Log Update (00.00.102)
+* 2017-08-20
++ Updated Classes with explicit for empty and single variable constructors
++ Also added override keyword for all virtual class implementations
++ (Win32) added missing DAO classes for unit test linkage.
+
+Change Log Update (00.00.101)
+* 2017-06-18
++ Working on FormManager and ModSysConfig code. Initial code to parse
+  ANSI template sizes and determined how many options will fit per page
+  is done.  Now working on code to parse and display the Templates
+  With the menu command / Form Options in lightbar format.
+
 Change Log Update (00.00.100)
 * 2017-06-07
 + Testing Arch Linux Port of ARM.  Found some issues with OpenSSL
@@ -31,7 +50,6 @@ Change Log Update (00.00.99)
 + Added README in ARM folder with build instructions and notes.
 + Created Makefile xrm-unittest-arm in Unit Test Folder for building and running
   all unit tests.
-
 
 Change Log Update (00.00.98)
 * 2017-05-27

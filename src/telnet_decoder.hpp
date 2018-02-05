@@ -24,7 +24,7 @@ class TelnetDecoder
 {
 public:
 
-    TelnetDecoder(connection_ptr connection)
+    explicit TelnetDecoder(connection_ptr connection)
         : m_connection(connection)
         , m_naws_row(24)
         , m_naws_col(80)
@@ -288,8 +288,8 @@ private:
     template <typename T>
     void addSequence(T &t, unsigned char option)
     {
-        typename T::iterator it =
-            find_if(t.begin(), t.end(), FindFirst(option));
+        //typename T::iterator it =
+            //find_if(t.begin(), t.end(), FindFirst(option));
 
         // Sequence Not Found, add new sequence.
         //if(it == t.end())

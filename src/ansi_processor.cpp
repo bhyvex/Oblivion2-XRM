@@ -331,7 +331,6 @@ std::string AnsiProcessor::screenBufferParse()
     std::string ansi_string = m_ansi_output;
 
     // Each Set of Codes for Expression Matches 1 set. will need more for char screens.
-    //
     boost::regex expr {"(\\|[0-9]{2}+%[0-9]{2})"};
 
     boost::smatch matches;
@@ -1019,6 +1018,7 @@ void AnsiProcessor::parseAnsiScreen(char *buff)
                             } // End Switch
                         } // End For
                     } // End Else
+                    break;
 
                 case RESET_MODE: // ?7h
                     esc_sequence.clear();

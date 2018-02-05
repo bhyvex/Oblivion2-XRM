@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Workspace Name="OBV2-XRM" Database="">
+<CodeLite_Workspace Name="OBV2-XRM" Database="" Version="10.0.0">
   <Environment>
     <![CDATA[]]>
   </Environment>
   <Project Name="sqlitewrapped" Path="../sqlitewrap/sqlitewrapped-lnx.project" Active="No"/>
-  <Project Name="xrm-server" Path="xrm-server-lnx.project" Active="No"/>
-  <Project Name="xrm-unittest" Path="../xrm-unittest/xrm-unittest-lnx.project" Active="Yes"/>
+  <Project Name="xrm-server" Path="xrm-server-lnx.project" Active="Yes"/>
+  <Project Name="xrm-unittest" Path="../xrm-unittest/xrm-unittest-lnx.project" Active="No"/>
   <Project Name="xrm-menu-convert-lnx" Path="../xrm-menu-convert/xrm-menu-convert-lnx.project" Active="No"/>
   <Project Name="xrm-menu-convert-prompt-lnx" Path="../xrm-menu-prompt-convert/xrm-menu-convert-prompt-lnx.project" Active="No"/>
   <BuildMatrix>
