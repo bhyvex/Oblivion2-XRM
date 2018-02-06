@@ -43,3 +43,5 @@ Temporary Items
 .apdisk
 changelog.txt
 src/form_manager.cpp
+win32/.codelite/refactoring.db
+win32/.codelite/obv2-xrm.tags
