@@ -209,9 +209,12 @@ void MenuBase::importMenu(menu_ptr menu_info)
     checkMenuOptionsAcsAccess();
     
     // Now we need to process custom screens from module menu
-    
-    
-    
+    std::cout << "Menu Name: " << m_menu_info->menu_name << std::endl;
+    std::cout << "Menu Pulldown: " << m_menu_info->menu_pulldown_file << std::endl;
+    std::cout << "Menu Helpfile: " << m_menu_info->menu_help_file << std::endl;
+
+    // if not load fallback menu.. etc..
+    std::cout << "Fallback Menu: " << m_fallback_menu << std::endl;
 }
 
 /**

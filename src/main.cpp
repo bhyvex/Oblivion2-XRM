@@ -107,9 +107,7 @@ void handler(const boost::system::error_code& /*e*/,
 //void run(boost::asio::io_service& io_service)
 extern "C" void *run(void *)
 {
-
     //static_cast<boost::asio::io_service*>(io)->run();
-
     boost::asio::io_service io_service;  //= static_cast<boost::asio::io_service*>(io);
 
     // Create Handles to Services
@@ -183,7 +181,6 @@ extern "C" void *run(void *)
 
     io_service.stop();
     pthread_exit(nullptr);
-
     return nullptr;
 }
 
@@ -232,7 +229,6 @@ auto main() -> int
 
         // Load Config and lets do some validation
         cfg.loadConfig();
-
         if (!cfg.validation())
         {
             return 0;
@@ -254,8 +250,6 @@ auto main() -> int
 
     // start io_service.run( ) in separate thread
     //auto t = std::thread(&run, std::ref(io_service));
-
-
 
     // TODO Replace std::thread in pi2 casue of gcc 4.9.1 issues!
     pthread_t t;
@@ -303,7 +297,6 @@ auto main() -> int
     // Proper Thread Shutdown
     void *status;
     pthread_join(t, &status);
-
     pthread_exit(nullptr);
 
     // Release Communicator Instance

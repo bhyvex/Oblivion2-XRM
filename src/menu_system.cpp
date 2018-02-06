@@ -4,6 +4,7 @@
 #include "mods/mod_prelogon.hpp"
 #include "mods/mod_logon.hpp"
 #include "mods/mod_signup.hpp"
+#include "mods/mod_sys_config.hpp"
 
 #include <boost/locale.hpp>
 
@@ -435,7 +436,8 @@ bool MenuSystem::menuOptionsMatrixCommands(const MenuOption &option)
             }
             // Feedback
         case 'F':
-            return false;
+            startupSysConfigModule();
+            return true;
 
             // Chat
         case 'P':
@@ -987,6 +989,26 @@ void MenuSystem::startupModuleSignup()
 
     startupModule(module);
 }
+
+/**
+ * @brief Starts up System Configuration Module
+ */
+void MenuSystem::startupSysConfigModule()
+{
+    // Setup the input processor
+    resetMenuInputIndex(MODULE_INPUT);
+
+    // Allocate and Create
+    module_ptr module(new ModSysConfig(m_session_data, m_config, m_ansi_process));
+    if (!module)
+    {
+        std::cout << "ModSysConfig Allocation Error!" << std::endl;
+        assert(false);
+    }
+
+    startupModule(module);
+}
+
 
 /**
  * @brief Handles Input for Login and PreLogin Sequences.

@@ -239,6 +239,11 @@ public:
      * @brief Starts up Signup Module
      */
     void startupModuleSignup();
+    
+    /**
+     * @brief Starts up System Configuration Module
+     */
+    void startupSysConfigModule();
 
     /**
      * @brief Handles Input for Login and PreLogin Sequences.
